@@ -1,6 +1,6 @@
 {
   "name": "map-scale-control",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Scale control that can be used with vector map renderer.",
   "author": {
     "name": "Damian Krzeminski",
