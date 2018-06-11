@@ -17,6 +17,8 @@
   ],
   "dependencies": {},
   "devDependencies": {
+    "jsdom": "^11.11.0",
+    "jsdom-global": "^3.0.2",
     "jshint": "^2.9.5",
     "mocha": "^5.2.0",
     "should": "^13.2.1"

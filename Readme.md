@@ -5,7 +5,7 @@
 
 # map-scale-control
 
-Scale control that can be used with vector map renderer: a simplified version of the `ScaleControl` implemented in [mapbox-gl-js] 
+Scale control that can be used with vector map renderer: a simplified version of the `ScaleControl` implemented in [mapbox-gl-js]
 
 ## Install
 
@@ -16,6 +16,15 @@ $ npm install --save map-scale-control
 ## Usage
 
 ```js
+var scaleControl = require('map-scale-control');
+
+var scale = scaleControl({
+  maxWidth: 150,
+  unit: 'imperial'
+ });
+
+ map.addControl(scale);
+ scale.setUnit('metric');
 ```
 
 ## License
