@@ -1,7 +1,6 @@
 [![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
+[![Build Status][build-image]][build-url]
 [![Dependency Status][deps-image]][deps-url]
-[![Dev Dependency Status][deps-dev-image]][deps-dev-url]
 
 # map-scale-control
 
@@ -31,16 +30,14 @@ var scale = scaleControl({
 
 MIT © [Damian Krzeminski](https://pirxpilot.me)
 
-[npm-image]: https://img.shields.io/npm/v/map-scale-control.svg
+[npm-image]: https://img.shields.io/npm/v/map-scale-control
 [npm-url]: https://npmjs.org/package/map-scale-control
 
-[travis-url]: https://travis-ci.org/furkot/map-scale-control
-[travis-image]: https://img.shields.io/travis/furkot/map-scale-control.svg
+[build-url]: https://github.com/furkot/map-scale-control/actions/workflows/check.yaml
+[build-image]: https://img.shields.io/github/actions/workflow/status/furkot/map-scale-control/check.yaml?branch=main
 
-[deps-image]: https://img.shields.io/david/furkot/map-scale-control.svg
-[deps-url]: https://david-dm.org/furkot/map-scale-control
+[deps-image]: https://img.shields.io/librariesio/release/npm/map-scale-control
+[deps-url]: https://libraries.io/npm/map-scale-control
 
-[deps-dev-image]: https://img.shields.io/david/dev/furkot/map-scale-control.svg
-[deps-dev-url]: https://david-dm.org/furkot/map-scale-control?type=dev
 
 [mapbox-gl-js]: https://github.com/mapbox/mapbox-gl-js
