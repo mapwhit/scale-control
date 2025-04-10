@@ -1,7 +1,7 @@
-const { describe, it, beforeEach } = require('node:test');
-const { JSDOM } = require('jsdom');
+import { describe, it, beforeEach } from 'node:test';
+import { JSDOM } from 'jsdom';
 
-const msc = require('../');
+import msc from '../lib/map-scale-control.js';
 
 const dom = new JSDOM('<div id="map-container"></div>');
 globalThis.document = dom.window.document;

@@ -7,6 +7,8 @@
     "email": "pirxpilot@furkot.com",
     "url": "https://pirxpilot.me"
   },
+  "type": "module",
+  "main": "./lib/map-scale-control.js",
   "repository": "furkot/map-scale-control",
   "license": "MIT",
   "keywords": [
@@ -24,7 +26,6 @@
     "test": "make check"
   },
   "files": [
-    "index.js",
     "lib"
   ]
 }
