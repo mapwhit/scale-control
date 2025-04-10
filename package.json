@@ -18,8 +18,7 @@
   "dependencies": {},
   "devDependencies": {
     "@pirxpilot/jshint": "~3",
-    "jsdom": "~23",
-    "jsdom-global": "~3"
+    "jsdom": "~26"
   },
   "scripts": {
     "test": "make check"

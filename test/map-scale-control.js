@@ -1,11 +1,15 @@
 const { describe, it, beforeEach } = require('node:test');
-const assert = require('assert/strict');
+const { JSDOM } = require('jsdom');
+
 const msc = require('../');
 
-function dummyMap(document) {
+const dom = new JSDOM('<div id="map-container"></div>');
+globalThis.document = dom.window.document;
+
+function dummyMap() {
   let lng = 0;
 
-  function noop() { }
+  function noop() {}
 
   function unproject() {
     lng += 1;
@@ -13,7 +17,7 @@ function dummyMap(document) {
   }
 
   function getContainer() {
-    return document.querySelector('#map-container');
+    return dom.window.document.querySelector('#map-container');
   }
 
   return {
@@ -25,49 +29,46 @@ function dummyMap(document) {
 }
 
 describe('map-scale-control', () => {
+  let map;
+
   beforeEach(function () {
-    document.body.innerHTML = '<div id="map-container"></div>';
-    this.map = dummyMap(document);
+    map = dummyMap();
   });
 
-  it('must add and remove scale', function () {
+  it('must add and remove scale', t => {
     const scale = msc();
-    const el = scale.onAdd(this.map);
+    const el = scale.onAdd(map);
 
-    assert(el);
-    assert.equal(el.className, 'mapboxgl-ctrl mapboxgl-ctrl-scale');
-    assert.equal(el.innerHTML, '50km');
-    assert.equal(el.style.width, '52px');
-
+    t.assert.ok(el);
+    t.assert.equal(el.className, 'mapboxgl-ctrl mapboxgl-ctrl-scale');
+    t.assert.equal(el.innerHTML, '50km');
+    t.assert.equal(el.style.width, '52px');
 
     scale.setUnit('imperial');
-    assert.equal(el.innerHTML, '50mi');
-    assert.equal(el.style.width, '84px');
+    t.assert.equal(el.innerHTML, '50mi');
+    t.assert.equal(el.style.width, '84px');
 
     scale.onRemove();
 
-    assert(!document.querySelector('mapboxgl-ctrl'));
+    t.assert.ok(!document.querySelector('mapboxgl-ctrl'));
   });
 
-
-  it('must respect options', function () {
+  it('must respect options', t => {
     const scale = msc({
       maxWidth: 200,
       unit: 'nautical'
     });
-    const el = scale.onAdd(this.map);
+    const el = scale.onAdd(map);
 
-    assert(el);
-    assert.equal(el.className, 'mapboxgl-ctrl mapboxgl-ctrl-scale');
-    assert.equal(el.innerHTML, '50nm');
-    assert.equal(el.style.width, '192px');
-
+    t.assert.ok(el);
+    t.assert.equal(el.className, 'mapboxgl-ctrl mapboxgl-ctrl-scale');
+    t.assert.equal(el.innerHTML, '50nm');
+    t.assert.equal(el.style.width, '192px');
 
     scale.setUnit('metrical');
-    assert.equal(el.innerHTML, '50km');
-    assert.equal(el.style.width, '104px');
+    t.assert.equal(el.innerHTML, '50km');
+    t.assert.equal(el.style.width, '104px');
 
     scale.onRemove();
   });
-
 });
