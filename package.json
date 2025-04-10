@@ -9,7 +9,10 @@
   },
   "type": "module",
   "main": "./lib/map-scale-control.js",
-  "repository": "furkot/map-scale-control",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/furkot/map-scale-control.git"
+  },
   "license": "MIT",
   "keywords": [
     "map-scale-control",
@@ -19,7 +22,7 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@pirxpilot/jshint": "~3",
+    "@biomejs/biome": "^1.9.4",
     "jsdom": "~26"
   },
   "scripts": {

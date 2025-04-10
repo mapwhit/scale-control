@@ -1,4 +1,4 @@
-import { describe, it, beforeEach } from 'node:test';
+import { beforeEach, describe, it } from 'node:test';
 import { JSDOM } from 'jsdom';
 
 import msc from '../lib/map-scale-control.js';
