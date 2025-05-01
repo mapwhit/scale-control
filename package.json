@@ -7,7 +7,12 @@
     "email": "pirxpilot@furkot.com",
     "url": "https://pirxpilot.me"
   },
-  "repository": "furkot/map-scale-control",
+  "type": "module",
+  "main": "./lib/map-scale-control.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/furkot/map-scale-control.git"
+  },
   "license": "MIT",
   "keywords": [
     "map-scale-control",
@@ -17,15 +22,13 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@pirxpilot/jshint": "~3",
-    "jsdom": "~23",
-    "jsdom-global": "~3"
+    "@biomejs/biome": "^1.9.4",
+    "jsdom": "~26"
   },
   "scripts": {
     "test": "make check"
   },
   "files": [
-    "index.js",
     "lib"
   ]
 }
