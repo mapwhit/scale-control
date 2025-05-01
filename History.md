@@ -1,4 +1,11 @@
 
+1.0.0 / 2025-05-01
+==================
+
+ * use `biome` instead of `jshint`
+ * transition to ESM
+ * simplify tests
+
 0.0.3 / 2024-01-16
 ==================
 
