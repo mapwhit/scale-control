@@ -1,6 +1,6 @@
 {
   "name": "@mapwhit/scale-control",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scale control that can be used with vector map renderer.",
   "author": {
     "name": "Damian Krzeminski",
