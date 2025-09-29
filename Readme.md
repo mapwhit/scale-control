@@ -2,22 +2,22 @@
 [![Build Status][build-image]][build-url]
 [![Dependency Status][deps-image]][deps-url]
 
-# map-scale-control
+# @mapwhit/scale-control
 
 Scale control that can be used with vector map renderer: a simplified version of the `ScaleControl` implemented in [mapbox-gl-js]
 
 ## Install
 
 ```sh
-$ npm install --save map-scale-control
+$ npm install --save @mapwhit/scale-control
 ```
 
 ## Usage
 
 ```js
-var scaleControl = require('map-scale-control');
+import scaleControl from '@mapwhit/scale-control';
 
-var scale = scaleControl({
+const scale = scaleControl({
   maxWidth: 150,
   unit: 'imperial'
  });
@@ -30,14 +30,13 @@ var scale = scaleControl({
 
 MIT © [Damian Krzeminski](https://pirxpilot.me)
 
-[npm-image]: https://img.shields.io/npm/v/map-scale-control
-[npm-url]: https://npmjs.org/package/map-scale-control
-
-[build-url]: https://github.com/furkot/map-scale-control/actions/workflows/check.yaml
-[build-image]: https://img.shields.io/github/actions/workflow/status/furkot/map-scale-control/check.yaml?branch=main
-
-[deps-image]: https://img.shields.io/librariesio/release/npm/map-scale-control
-[deps-url]: https://libraries.io/npm/map-scale-control
-
-
 [mapbox-gl-js]: https://github.com/mapbox/mapbox-gl-js
+
+[npm-image]: https://img.shields.io/npm/v/@mapwhit/scale-control
+[npm-url]: https://npmjs.org/package/@mapwhit/scale-control
+
+[build-url]: https://github.com/mapwhit/scale-control/actions/workflows/check.yaml
+[build-image]: https://img.shields.io/github/actions/workflow/status/mapwhit/scale-control/check.yaml?branch=main
+
+[deps-image]: https://img.shields.io/librariesio/release/npm/@mapwhit/scale-control
+[deps-url]: https://libraries.io/npm/@mapwhit%2Fscale-control

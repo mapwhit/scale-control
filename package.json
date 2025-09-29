@@ -1,5 +1,5 @@
 {
-  "name": "map-scale-control",
+  "name": "@mapwhit/scale-control",
   "version": "1.0.0",
   "description": "Scale control that can be used with vector map renderer.",
   "author": {
@@ -8,10 +8,10 @@
     "url": "https://pirxpilot.me"
   },
   "type": "module",
-  "main": "./lib/map-scale-control.js",
+  "exports": "./lib/map-scale-control.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/furkot/map-scale-control.git"
+    "url": "git+https://github.com/mapwhit/scale-control.git"
   },
   "license": "MIT",
   "keywords": [
