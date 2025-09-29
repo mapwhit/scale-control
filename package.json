@@ -22,8 +22,8 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "jsdom": "~26"
+    "@biomejs/biome": "2.2.4",
+    "jsdom": "~27"
   },
   "scripts": {
     "test": "make check"

@@ -31,7 +31,7 @@ function dummyMap() {
 describe('map-scale-control', () => {
   let map;
 
-  beforeEach(function () {
+  beforeEach(() => {
     map = dummyMap();
   });
 
